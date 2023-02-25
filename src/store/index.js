@@ -1,3 +1,4 @@
+//定义Vuex.store
 import { createStore } from 'vuex'
 import state from './state'
 import * as actions from './actions'
