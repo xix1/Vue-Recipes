@@ -1,6 +1,7 @@
 <template>
     <div class="p-8 pb-0">
-        <input v-model="keyword" @change="searchMeals" type="text" class="rounded border-2 border-gray-200 w-full"
+        <input v-model="keyword" @change="searchMeals" type="text" 
+        class="rounded border-2 border-gray-200 w-full"
             placeholder="查找食谱吧！" />
 
     </div>
@@ -10,7 +11,7 @@
             :key="meal.idMeal" 
             class="bg-white shadow rounded-xl"
         >
-            <router-link to="/">
+            <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
                 <img 
                     :src="meal.strMealThumb" 
                     alt="strMeal" 
@@ -20,18 +21,11 @@
             
             <div class="p-3">
                 <h3 class="font-bold">{{ meal.strMeal }}</h3>
-                <p class="mb-4">
-                    aaaaaaaaaaaaaaaaaaaa
+                <p class="mb-4 line-clamp-3">
+                    {{ meal.strInstructions}}
                 </p>
                 <div class="flex items-center justify-between">
-                    <a 
-                        :href="meal.strYoutube" 
-                        target="_blank"
-                        
-                        class="px-3 py-2 rounded text-white border-2 border-red-600  bg-red-500 hover:bg-red-600  transition-colors"
-                    >
-                        YouTube
-                    </a>
+                   <YouTubeButton :href="meal.strYoutube">YouTube</YouTubeButton>
                 </div>
             </div>
 
@@ -43,6 +37,7 @@
 import { ref, computed, onMounted } from 'vue';
 import store from '../store';
 import { useRoute } from 'vue-router';
+import YouTubeButton from '../components/YouTubeButton.vue';
 
 const keyword = ref('');
 //access the data from the store state
