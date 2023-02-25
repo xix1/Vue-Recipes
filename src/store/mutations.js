@@ -6,3 +6,11 @@
 export function setSearchedMeals(state, meals) { //accept state, and meals which are searched and found
     state.searchedMeals = meals
 }
+
+export function setMealsByLetter(state, meals) { //accept state, and meals which are searched and found
+    state.mealsByLetter = meals
+}
+
+export function setMealsByIngredient(state, meals) { //accept state, and meals which are searched and found
+    state.mealsByIngredient = meals
+}

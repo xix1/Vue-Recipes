@@ -6,7 +6,23 @@ import axiosClient from '../axiosClient';
 export function searchMeals({ commit }, keyword) {
     axiosClient.get('search.php?s='+keyword)  //making request to server
         .then(({ data }) => {  //with the response 'data'
-            debugger;
+            
             commit('setSearchedMeals', data.meals)// commit the mutation to save the received data
+        })
+}
+
+export function searchMealsByLetter({ commit }, letter) {
+    axiosClient.get('search.php?f='+letter)  //making request to server
+        .then(({ data }) => {  //with the response 'data'
+            
+            commit('setMealsByLetter', data.meals)// commit the mutation to save the received data
+        })
+}
+
+export function searchMealsByIngredient({ commit }, ingredient) {
+    axiosClient.get('filter.php?i='+ingredient)  //making request to server
+        .then(({ data }) => {  //with the response 'data'
+            
+            commit('setMealsByIngredient', data.meals)// commit the mutation to save the received data
         })
 }
