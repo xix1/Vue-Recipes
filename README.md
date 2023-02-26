@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+项目名称：食谱搜索应用程序
+项目描述：使用Vue.js框架和第三方API构建一个食谱搜索应用程序，用户可以通过关键字搜索食谱，并查看相关菜谱的详细信息和步骤。使用Axios库进行HTTP请求，Tailwind CSS库进行页面样式设计。
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+涉及技术栈：
+Vue.js框架、Vue Router、Vuex
+Axios库
+Tailwind CSS库
+Firebase Authentication API、Firebase Cloud Firestore
+HTML5、CSS、JavaScript
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+API: https://www.themealdb.com/api.php
