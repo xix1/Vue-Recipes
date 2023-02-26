@@ -13,6 +13,7 @@ import MealItem from './MealItem.vue'
 const { meals } = defineProps({
     meals: {
         required: true,
+        type: Object
         
     }
 })

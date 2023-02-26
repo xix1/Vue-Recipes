@@ -4,13 +4,17 @@
 //需要改变state的值就要在回调函数中改变
 //执行这个回调函数：store.commit
 export function setSearchedMeals(state, meals) { //accept state, and meals which are searched and found
-    state.searchedMeals = meals
+    state.searchedMeals = meals || []
 }
 
 export function setMealsByLetter(state, meals) { //accept state, and meals which are searched and found
-    state.mealsByLetter = meals
+    state.mealsByLetter = meals || []
 }
 
 export function setMealsByIngredient(state, meals) { //accept state, and meals which are searched and found
-    state.mealsByIngredient = meals
+    state.mealsByIngredient = meals || []
 }
+
+export function setIngredient(state, ingredient) {
+    state.ingredient = ingredient
+  }
